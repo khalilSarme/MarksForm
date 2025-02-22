@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: 0;
+  outline: none;
+  font-family: "Segoe UI", Tahoma, Sans-Serif;
+}
+
+body, #app {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  scroll-behavior: smooth;
+}
+
+.window {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.window .title {
+  background-color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.window .container {
+  background-color: #ffffff;
+  flex: 1 0 auto;
+  padding: 25pt 1rem;
+}
+
+.marksForm {
+  max-width: 768px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25pt;
+}
+
+.sheetWindow {
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  transition: left 1s ease-in-out;
+  height: 100%;
+  box-shadow: 0 0 5px 0 grey;
+  overflow: auto;
+}
+
+.marksSheet {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25pt;
+}
+
+.msform {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25pt;
+  width: 100%;
+}
+
+.collection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18pt;
+  margin: 0 auto;
+  padding: 25pt 18pt;
+  background-color: #f1f1f1;
+  border-radius: 13pt;
+}
+
+.msform .collection {
+  width: 100%;
+}
+
+.collection label , .collection span.fullGrade {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.collection h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.collection .marksContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10pt;
+}
+
+.marksContainer h4 {
+  font-weight: 400;
+  font-size: 1.1em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5pt;
+  border-bottom: 1px solid darkviolet;
+  padding: 5pt 0;
+}
+
+.marksContainer h4 span {
+  color: darkviolet;
+  font-weight: 700;
+}
+
+.collection span.fullGrade + span {
+  font-size: 2em;
+  color: darkviolet;
+}
+
+.collection input {
+  background-color: #ffffff;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 1.2em;
+  padding: 0.5rem;
+  caret-color: darkviolet;
+  transition: all .3s ease-in-out;
+  border: 2px solid #7f7f7f;
+  border-radius: 5pt;
+  color: #0f0f0f;
+}
+
+.collection input:focus {
+  border-color: darkviolet;
+}
+
+.marksForm .collection:last-of-type {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4em;
+  border-radius: 13pt;
+  padding: 13pt;
+  flex: 0 0 auto;
+  background-color: #f1f1f1;
+  box-shadow: 0 3px 5px 0 #afafaf;
+  transition: all .3s ease-in-out;
+}
+
+.button:hover {
+  box-shadow: none;
+}
+
+.saveBtn {
+  background-color: darkviolet;
+  color: #f8f8f8;
+  width: 100%;
+  max-width: 380px;
+}
+
+.saveBtn:hover {
+  background-color: #9f00df;
+}
+
+.button.outline {
+  background-color: transparent !important;
+  color: darkviolet;
+}
+
+.group {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 25pt;
+}
+
+@media (max-width: 767px) {
+  .group .collection {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .group .collection {
+    width: calc(50% - 12.5pt);
+  }
+}
+
+@media (min-width: 1200px) {
+  .group .collection {
+    width: calc(33.33333% - 8.333pt);
+  }
+}
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
