@@ -20,7 +20,6 @@ body, #app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 1px;
 }
 
 .window .title {
@@ -48,7 +47,7 @@ body, #app {
   position: fixed;
   top: 0;
   left: -100vw;
-  transition: left 1s ease-in-out;
+  transition: left .5s ease-in-out;
   height: 100%;
   box-shadow: 0 0 5px 0 grey;
   overflow: auto;
@@ -160,11 +159,11 @@ body, #app {
   padding: 13pt;
   flex: 0 0 auto;
   background-color: #f1f1f1;
-  box-shadow: 0 3px 5px 0 #afafaf;
+  box-shadow: 0 3px 6px 0 #afafaf;
   transition: all .3s ease-in-out;
 }
 
-.button:hover {
+.button:active {
   box-shadow: none;
 }
 
@@ -173,10 +172,6 @@ body, #app {
   color: #f8f8f8;
   width: 100%;
   max-width: 380px;
-}
-
-.saveBtn:hover {
-  background-color: #9f00df;
 }
 
 .button.outline {

@@ -47,6 +47,7 @@ export default {
   <h1 class="title">Marks Form</h1>
   <div class="container">
   <div class="marksForm">
+  <button class="button outline showMarksSheet" type="button" @click="toggleWindow()">Show marks sheet</button>
   <form class="msform" method="get" @submit.prevent="saveMark()">
   <div class="collection">
   <label for="subjectName">Subject name</label>
@@ -66,7 +67,6 @@ export default {
   </div>
   <button class="button saveBtn" type="submit" @click.prevent="saveMark()">Save mark in sheet</button>
   </form>
-  <button class="button outline showMarksSheet" type="button" @click="toggleWindow()">Show marks sheet</button>
   </div>
   </div>
   </div>`
