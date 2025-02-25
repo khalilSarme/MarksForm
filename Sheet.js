@@ -20,6 +20,8 @@ export default {
   <h1 class="title">Marks Sheet</h1>
   <div class="container">
   <div class="marksSheet">
+  <button class="button outline showMarksForm" type="button" @click="toggleWindow()" >Add a new mark</button>
+  <button class="button outline delAll" type="button" @click="delAll()" >Empty sheet</button>
   <div class="group">
   <div class="collection" v-for="(mark,i) in props.grades" :key="i">
   <h3 class="marktitle">{{ mark.sname }}</h3>
@@ -30,8 +32,7 @@ export default {
   </div>
   </div>
   </div>
-  <button class="button outline showMarksForm" type="button" @click="toggleWindow()" >Add a new mark</button>
-  <button class="button outline delAll" type="button" @click="delAll()" >Empty sheet</button>
+
   </div>
   </div>
   </div>`

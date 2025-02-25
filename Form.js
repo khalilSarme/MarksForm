@@ -11,19 +11,25 @@ export default {
     }
   },
   methods: {
-    toggleWindow(){
+    toggleWindow() {
       this.$emit("sheetWindow");
     },
     saveMark() {
-      let grade = this.praceGrade + this.theorGrade;
-      if (this.subject == "" || ((grade > 100 || this.praceGrade > 30 || this.theorGrade > 70) && this.subject == "") || this.praceGrade > 30 || this.theorGrade > 70) {
+      let [grade,
+        lowGrade,
+        hightGrade] = [this.praceGrade + this.theorGrade,
+        0,
+        100]
+      if (this.subject == "" || this.praceGrade > 30 || this.praceGrade < lowGrade || this.theorGrade < lowGrade || grade <= lowGrade || grade > hightGrade) {
+        this.praceGrade = 0;
+        this.theorGrade = 0;
         return;
       } else {
         const newMark = {
           sname: this.subject,
-          spg: Number(this.praceGrade),
-          stg: Number(this.theorGrade),
-          sfg: this.praceGrade + this.theorGrade,
+          spg: Math.round(this.praceGrade),
+          stg: Math.round(this.theorGrade),
+          sfg: Math.round(this.praceGrade + this.theorGrade),
         }
         this.props.grades.push(newMark);
         localStorage.setItem('marks', JSON.stringify(this.props.grades));
@@ -36,7 +42,7 @@ export default {
   computed: {
     fullGrade() {
       let grade = this.praceGrade + this.theorGrade;
-      if (grade > 100 || this.praceGrade > 30 || this.theorGrade > 70) {
+      if (grade === null || grade === Infinity || grade === undefined || grade > 100 || this.praceGrade > 30 || this.praceGrade < 0 || this.theorGrade < 0) {
         return 0;
       } else {
         return grade;
