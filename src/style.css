@@ -1,0 +1,99 @@
+@import url('./views/views.vue.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  font-family: "Segoe UI", Tahoma, Arial, Sans-Serif;
+}
+
+:root {
+  --primary-color: #2D64FF;
+  --secondary-color: #9C9C9C;
+  --warn-color: #EC8B04;
+  --danger-color: #B6262A;
+  --text-light-color: #FEFEFE;
+  --vue-color: #007253;
+  scroll-behavior: smooth;
+}
+
+.btn {
+  border: 0;
+  outline: none;
+  padding: 8pt;
+  border-radius: calc(8pt - 0.2em);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 2px 0 gray;
+  transition: all .1s ease-in-out;
+  font-size: 1.179em;
+}
+
+.btn:active {
+  transform: scale(0.97);
+  box-shadow: none !important;
+}
+
+.container {
+  background-color: transparent;
+  width: 100%;
+  padding: 1em;
+  margin: auto;
+}
+
+@media (min-width:576px) {
+  .container {
+    max-width: 540px
+  }
+}
+
+@media (min-width:768px) {
+  .container {
+    max-width: 720px
+  }
+}
+
+@media (min-width:992px) {
+  .container {
+    max-width: 960px
+  }
+}
+
+@media (min-width:1200px) {
+  .container {
+    max-width: 1140px
+  }
+}
+
+@media (min-width:1400px) {
+  .container {
+    max-width: 1320px
+  }
+}
+
+.collection {
+  background-color: transparent;
+  padding: 0 0.5em;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.5em 1em;
+  background-color: var(--vue-color);
+  font-size: 1.5em;
+}
+
+.header > .container {
+  padding: 0;
+}
+
+.logo {
+  color: var(--text-light-color);
+}

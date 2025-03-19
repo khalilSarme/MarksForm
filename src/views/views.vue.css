@@ -1,0 +1,212 @@
+#app {
+  display: grid;
+  min-height: 100vh;
+  width: 100vw;
+  grid-template-rows: auto 1fr;
+  color: #2b2b2b;
+}
+
+.on-maintain {
+  position: relative;
+}
+
+.on-maintain::after {
+  content: 'soon';
+  background-color: #f1f1f1;
+  color: var(--danger-color);
+  padding: 3px 5px;
+  margin: 0 5px;
+  border-radius: 3pt;
+  font-weight: 500;
+}
+
+.view {
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.view h1 {
+  text-align: center;
+}
+
+.view .container {
+  height: 100%;
+}
+
+.startVue, .formVue , .marksVue {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.color-v {
+  color: var(--vue-color);
+}
+
+.startVue .collection {
+  background-color: #ffffff;
+  padding: 1.8em;
+  border-radius: 8pt;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+  box-shadow: 0 0 3rem 0 #c6c6c6;
+}
+
+.startVue .collection h3 {
+  font-size: 1.3em;
+  font-weight: 400;
+}
+
+.bg-v {
+  background-color: var(--vue-color) !important;
+  color: #ffffff;
+}
+
+.outline-v {
+  color: var(--vue-color);
+  box-shadow: 0 1px 2px 0 var(--vue-color) !important;
+}
+
+.formVue .form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2em;
+  padding: 1.8em;
+  border-radius: 8pt;
+  box-shadow: 0 0 3rem 0 #c6c6c6;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid #8c8c8c;
+}
+
+.formVue .form .collection {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+}
+
+.form .collection label {
+  font-size: 1.3em;
+  font-weight: 400;
+}
+
+.form .collection input {
+  background-color: transparent;
+  box-shadow: 0 0 0 2px #e5e5e5;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: calc(8pt - 0.2em);
+  transition: box-shadow .2s ease-in-out;
+}
+
+.form input:focus {
+  box-shadow: 0 0 0 3px #00725399;
+}
+
+.form .btn {
+  width: 100%;
+}
+
+.formVue > .collection {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.7em;
+  width: 100%;
+  max-width: 500px;
+  margin: 3rem auto 0;
+}
+
+.form input.dangerInput {
+  box-shadow: 0 0 0 3px var(--danger-color) !important;
+}
+
+.form .btn:disabled {
+  opacity: 0.5;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.dangerError {
+  color: var(--danger-color);
+}
+
+.marksVue .collection {}
+
+.marksVue .collection:first-of-type {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.marksVue .collection:last-of-type {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5em;
+  width: 100%;
+  max-width: 500px;
+  margin: 3rem auto 0;
+}
+
+.marksVue .mark {
+  background-color: #ffffff;
+  padding: 1.8em;
+  border-radius: 8pt;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+  box-shadow: 0 0 3rem 0 #c6c6c6;
+  border: 1px solid #8c8c8c;
+}
+
+.marksVue .mark h3 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 1.3em;
+  font-weight: 400;
+  border-bottom: 1px solid #2b2b2b;
+}
+
+.mark h3 .fail , .mark h3 .success {
+  font-weight: 700;
+}
+
+.mark .fail {
+  color: var(--danger-color);
+}
+
+.mark .success {
+  color: var(--vue-color);
+}
+
+.bg-danger {
+  background-color: var(--danger-color);
+  color: #ffffff;
+}
+
+.outline-danger {
+  color: var(--danger-color);
+  box-shadow: 0 1px 2px 0 var(--danger-color) !important;
+}
