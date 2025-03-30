@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  font-family: "Segoe UI", Tahoma, Arial, Sans-Serif;
+}
+
+:root {
+  --vue-color: var(--bs-success);
+  --vue-alpha-color: rgba(0,110,71,0.2);
+  --vue-bang-color: var(--bs-danger);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 2em;
+  color: var(--vue-color) !important;
+}
+
+.header .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.header .btn {
+  border: 0 !important;
+  color: #ffffff !important;
+  border-radius: 0;
+  padding: 1rem 1.5rem;
+}
+
+.header .btn:active, .header .btn.active {
+  box-shadow: none !important;
+  background-color: var(--vue-color) !important;
+}
+
+.color-v {
+  color: var(--vue-color);
+}
+
+.bg-v {
+  background-color: var(--vue-color);
+  color: #ffffff;
+}
+
+.color-bang-v {
+  color: var(--vue-bang-color);
+}
+
+.bg-bang-v {
+  background-color: var(--vue-bang-color);
+}
+
+.bg-alpha-v {
+  background-color: var(--vue-alpha-color);
+}
+
+.form {
+  max-width: 600px;
+  margin: auto;
+  border: 1px solid #bcbcbc;
+}
+
+.marksV .grades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.marksV .grades .card {
+  flex: 0 0 100%;
+}
+
+@media (min-width: 576px) {
+  .marksV .grades .card {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+@media (min-width: 992px) {
+  .marksV .grades .card {
+    flex: 0 0 calc(33.333333% - 1rem);
+  }
+}
+
+.card-title {
+  margin: 0;
+}
+
+.card-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
